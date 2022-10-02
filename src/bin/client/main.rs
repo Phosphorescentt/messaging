@@ -27,6 +27,7 @@ fn main() {
             eprintln!("Failed to connect: {}", e);
         }
     }
+    get_input();
 }
 
 fn get_input() -> String {
