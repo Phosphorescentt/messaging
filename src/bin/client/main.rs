@@ -59,7 +59,7 @@ fn main() {
     let stream = TcpStream::connect("localhost:3333").unwrap();
     stream.set_nonblocking(true);
     stream.set_read_timeout(Some(Duration::from_millis(1000)));
-    stream.set_write_timeout(Some(Duration::from_millis(1000)));
+    stream.set_write_timeout(Some(Duration::from_millis(10)));
 
     let stream = Arc::new(Mutex::new(stream));
     let stream2 = Arc::clone(&stream);
